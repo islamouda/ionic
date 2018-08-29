@@ -10,10 +10,24 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { AddplacePage } from '../pages/addplace/addplace';
 import { PlacemapPage } from '../pages/placemap/Placemap';
 import { PlacemodifyPage } from '../pages/placemodify/placemodify';
-
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { WishServiceProvider } from '../providers/wish-service/wish-service';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+export const firebaseConfig  = {
+  apiKey: "AIzaSyC7Le4OcazGu8dpyI3_PE9jCCDcPukndQc",
+  authDomain: "wish-74721.firebaseapp.com",
+  databaseURL: "https://wish-74721.firebaseio.com",
+  projectId: "wish-74721",
+  storageBucket: "wish-74721.appspot.com",
+  messagingSenderId: "821124576066"
+};
+
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
