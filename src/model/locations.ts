@@ -2,7 +2,7 @@ export interface Locations {
 
     key?: string;
     latitude: string; 
-    longtude: string;
+    longitude: string;
     info:string;
 
 }

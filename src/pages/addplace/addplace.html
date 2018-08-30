@@ -15,18 +15,26 @@
 
 <ion-content padding>
 
-    <ion-list>
+    <ion-list> 
 
         <ion-item>
-          <ion-label floating>Username</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-label floating>Info</ion-label>
+          <ion-input [(ngModel)]='locations.info' type="text"></ion-input>
         </ion-item>
       
         <ion-item>
-          <ion-label floating>Password</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-label floating>Latitude</ion-label>
+          <ion-input [(ngModel)]='locations.latitude' type="text"></ion-input>
         </ion-item>
       
+        <ion-item>
+          <ion-label floating>Longtude</ion-label>
+          <ion-input [(ngModel)]='locations.longitude' type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <button ion-button full color="danger" (click)="addLocation(locations)">اضافة</button>
+        </ion-item>
       </ion-list>
       
 </ion-content>

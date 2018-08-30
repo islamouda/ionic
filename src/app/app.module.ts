@@ -7,6 +7,12 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
+
 import { AddplacePage } from '../pages/addplace/addplace';
 import { PlacemapPage } from '../pages/placemap/Placemap';
 import { PlacemodifyPage } from '../pages/placemodify/placemodify';
@@ -14,8 +20,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { WishServiceProvider } from '../providers/wish-service/wish-service';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 export const firebaseConfig  = {
   apiKey: "AIzaSyC7Le4OcazGu8dpyI3_PE9jCCDcPukndQc",
@@ -43,7 +48,8 @@ export const firebaseConfig  = {
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -59,7 +65,8 @@ export const firebaseConfig  = {
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    WishServiceProvider
   ]
 })
 export class AppModule {}

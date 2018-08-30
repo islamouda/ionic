@@ -39,8 +39,8 @@ export class WishServiceProvider {
   }
 
   
-  removeLocation(locations:Locations){
-    return this.gpsListRef.remove(locations.key)
+  removeLocation(locations){
+    return this.gpsListRef.remove(locations)
     
   }
 
