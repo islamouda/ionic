@@ -19,6 +19,13 @@ import { PlacemodifyPage } from '../pages/placemodify/placemodify';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { WishServiceProvider } from '../providers/wish-service/wish-service';
+import { LoginPage } from '../pages/login/login';
+import { AddprofilePage } from '../pages/addprofile/addprofile';
+import { RegisterPage } from '../pages/register/register';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { ProfileServiceProvider } from '../providers/profile-service/profile-service';
+
 
 
 
@@ -43,7 +50,10 @@ export const firebaseConfig  = {
     TabsPage,
     AddplacePage,
     PlacemapPage,
-    PlacemodifyPage
+    PlacemodifyPage,
+    RegisterPage,
+    LoginPage,
+    AddprofilePage
   ],
   imports: [
     BrowserModule,
@@ -56,17 +66,23 @@ export const firebaseConfig  = {
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,
+    HomePage, 
     TabsPage,
     AddplacePage,
     PlacemapPage,
-    PlacemodifyPage
+    PlacemodifyPage,
+    RegisterPage,
+    LoginPage,
+    AddprofilePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    WishServiceProvider
+    WishServiceProvider,
+    AngularFireAuth,
+    AuthServiceProvider,
+    ProfileServiceProvider
   ]
 })
 export class AppModule {}

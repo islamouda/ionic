@@ -11,6 +11,7 @@ import { PlacemodifyPage } from '../placemodify/placemodify';
 
 
 @Component({
+  
   templateUrl: 'tabs.html'
 })
 export class TabsPage {

@@ -1,0 +1,51 @@
+<!--
+  Generated template for the AddprofilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input [(ngModel)]='profiles.name' type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>L_name</ion-label>
+      <ion-input [(ngModel)]='profiles.lname' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Age</ion-label>
+      <ion-input [(ngModel)]='profiles.age' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Debartment</ion-label>
+      <ion-input [(ngModel)]='profiles.deb' type="text"></ion-input>
+    </ion-item>
+
+ 
+
+    <ion-item>
+      
+      <button ion-button full (click)="addProfile(profiles)">Full Button</button>
+
+    </ion-item>
+  
+  </ion-list>
+
+
+</ion-content>

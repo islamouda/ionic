@@ -10,7 +10,7 @@ import { ContactPage } from '../contact/contact';
 
 
 /**
- * Generated class for the PlacemodifyPage page.
+ * Generated class for the PlacemodifyPage page. 
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.

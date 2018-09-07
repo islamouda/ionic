@@ -1,6 +1,14 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
+
+    <ion-buttons end>
+        <button ion-button icon-only  color="royal" (click)="logout()">
+          <ion-icon name="ios-log-out"></ion-icon>
+        </button>
+      </ion-buttons>
+
+
   </ion-navbar>
 </ion-header>
 
@@ -14,4 +22,44 @@
     Take a look at the <code>src/pages/</code> directory to add or change tabs,
     update any existing page or create new pages.
   </p>
+
+  <button ion-button full (click)="goTOProfileNew()">Add Profile</button>
+<br>
+<hr> 
+
+
+
+<ion-card *ngFor='let pro of proObject'>
+  <img src="assets/imgs/1.jpg">
+
+  <ion-card-content>
+    <ion-card-title>
+      {{pro[1]['name']}}
+      </ion-card-title>
+    <p>Name : {{pro[1]['lname']}} </p>
+    <p>Age : {{pro[1]['age']}} </p>
+    <p>Debartment : {{pro[1]['deb']}} </p>
+
+    
+
+
+ <ion-row>
+      <ion-col col-6> 
+        <button ion-button round small color="secondary" start (click)="showPrompt(pro[0] ,pro[1]['name'],pro[1]['lname'],pro[1]['age'],pro[1]['deb'])">Edit</button>
+      </ion-col>
+    
+      <ion-col col-6>
+        <button ion-button small round end (click)="removeProfiles(pro[0])">Clear</button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card-content>
+</ion-card>
+
+
+
+
+
+
+
 </ion-content>
