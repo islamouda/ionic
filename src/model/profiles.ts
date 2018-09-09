@@ -7,4 +7,3 @@ export interface Profiles {
     deb:string;
 
 }
- 
